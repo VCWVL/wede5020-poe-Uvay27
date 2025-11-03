@@ -1,0 +1,15 @@
+# robots.txt for Checkpoint Gaming Website
+# This file tells search engines which pages to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://uvayharichand.github.io/checkpoint-gaming/sitemap.xml
+
+# Directives for search engines
+Disallow: /private/
+Disallow: /temp/
+
+# Crawl delay (optional)
+Crawl-delay: 1

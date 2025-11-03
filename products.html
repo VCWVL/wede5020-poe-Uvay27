@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO TITLE AND META TAGS -->
+    <title>Gaming Products | Consoles, PCs & Accessories | Checkpoint Gaming SA</title>
+    <meta name="description" content="Browse Checkpoint Gaming's product catalog: PlayStation 5, Xbox Series X, gaming PCs, headsets, controllers, and latest games. Best prices in South Africa.">
+    <meta name="keywords" content="gaming products, PlayStation 5, Xbox Series X, gaming PCs, gaming accessories, video games, consoles South Africa">
+    <meta name="author" content="Checkpoint Gaming">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #f2f2f2;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #00bfff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6600;
+        }
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #00bfff;
+            text-align: center;
+        }
+        
+        /* SEARCH BAR STYLING */
+        .search-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-container input {
+            padding: 12px 20px;
+            width: 300px;
+            border-radius: 25px;
+            border: 2px solid #00bfff;
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        /* PRODUCT GRID */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .product-card {
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            color: #ff6600;
+        }
+        .btn {
+            background-color: #00bfff;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ff6600;
+        }
+        
+        /* LIGHTBOX STYLING */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkpoint Gaming</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        <p style="text-align: center;">Explore our latest gaming products across different categories.</p>
+
+        <!-- SEARCH FUNCTIONALITY -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+
+        <!-- PRODUCT GRID -->
+        <div class="product-grid">
+            <!-- PRODUCT CARDS -->
+            <div class="product-card" data-name="playstation 5 console gaming">
+                <img src="Images/PS5-Digital-Slim-Hero-Box-and-console-US-V2.webp" alt="PlayStation 5 Console - Next-gen Gaming">
+                <h3>PlayStation 5</h3>
+                <p>Next-gen console with ultra-fast SSD and immersive gameplay.</p>
+                <p><strong>R12,000</strong></p>
+                <button class="btn" onclick="addToCart('PlayStation 5', 12000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="xbox series x console gaming">
+                <img src="Images/games_gear_series-x.webp" alt="Xbox Series X Console - Powerful Gaming">
+                <h3>Xbox Series X</h3>
+                <p>Powerful gaming performance with 4K support.</p>
+                <p><strong>R11,000</strong></p>
+                <button class="btn" onclick="addToCart('Xbox Series X', 11000)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="wireless controller gaming accessory">
+                <img src="Images/scuf-customizable_01.jpg" alt="Wireless Gaming Controller for PC and Consoles">
+                <h3>Wireless Controller</h3>
+                <p>Responsive and durable, compatible with PC & Consoles.</p>
+                <p><strong>R1,200</strong></p>
+                <button class="btn" onclick="addToCart('Wireless Controller', 1200)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="call of duty modern warfare game shooter">
+                <img src="Images/call-of-duty-modern-warfare---button-01-1559237615728.jpg" alt="Call of Duty Modern Warfare - Action Shooter Game">
+                <h3>Call of Duty: Modern Warfare</h3>
+                <p>Latest shooter with online multiplayer and campaign mode.</p>
+                <p><strong>R899</strong></p>
+                <button class="btn" onclick="addToCart('Call of Duty: Modern Warfare', 899)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="gaming headset surround sound accessory">
+                <img src="Images/jbl-quantum-910-wireless-gaming-headset.avif" alt="JBL Quantum 910 Wireless Gaming Headset">
+                <h3>Surround Sound Headset</h3>
+                <p>Comfortable with noise-cancellation for long sessions.</p>
+                <p><strong>R2,500</strong></p>
+                <button class="btn" onclick="addToCart('Surround Sound Headset', 2500)">Add to Cart</button>
+            </div>
+
+            <div class="product-card" data-name="gaming laptop computer portable">
+                <img src="Images/1622468922392.jpg" alt="High Performance Gaming Laptop">
+                <h3>Gaming Laptop</h3>
+                <p>High performance laptop for gaming on the go.</p>
+                <p><strong>R18,000</strong></p>
+                <button class="btn" onclick="addToCart('Gaming Laptop', 18000)">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- LIGHTBOX FOR ENLARGED IMAGES -->
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="Enlarged product view">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Checkpoint Gaming | Designed by Uvay Harichand</p>
+    </footer>
+
+    <script>
+        // SEARCH FUNCTIONALITY
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const products = document.querySelectorAll('.product-card');
+            
+            products.forEach(product => {
+                const productData = product.getAttribute('data-name');
+                if (productData.includes(searchTerm)) {
+                    product.style.display = 'block';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+        
+        // LIGHTBOX FUNCTIONALITY
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        document.querySelectorAll('.product-card img').forEach(img => {
+            img.addEventListener('click', function() {
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        lightbox.addEventListener('click', function() {
+            this.classList.remove('active');
+        });
+        
+        // ADD TO CART FUNCTION
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: productName,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " has been added to your cart! Price: R" + price);
+            updateCartBadge();
+        }
+        
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            const existingBadge = document.querySelector('.cart-badge');
+            if (existingBadge) {
+                existingBadge.remove();
+            }
+            
+            if (totalItems > 0) {
+                const cartLink = document.querySelector('a[href="cart.html"]');
+                const badge = document.createElement('span');
+                badge.className = 'cart-badge';
+                badge.textContent = totalItems;
+                badge.style.cssText = 'background: #ff6600; color: white; border-radius: 50%; padding: 2px 6px; margin-left: 5px; font-size: 0.8rem;';
+                cartLink.appendChild(badge);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+    </script>
+</body>
+</html>

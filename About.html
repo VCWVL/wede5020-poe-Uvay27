@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO TITLE AND META TAGS -->
+    <title>About Checkpoint Gaming | Gaming Store History & Mission | South Africa</title>
+    <meta name="description" content="Learn about Checkpoint Gaming's history since 2015. Our mission to provide affordable gaming experiences in South Africa. Values, team, and community focus.">
+    <meta name="keywords" content="about checkpoint gaming, gaming store history, South Africa gaming, gaming community, gaming mission">
+    <meta name="author" content="Checkpoint Gaming">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: Arial; background:#0d0d0d; color:#f2f2f2; margin:0; padding:0;}
+        header, footer { background:#1a1a1a; text-align:center; padding:15px;}
+        nav a { color:#00bfff; margin:0 15px; text-decoration:none; font-weight:bold;}
+        nav a:hover { color:#ff6600;}
+        main { max-width:900px; margin:20px auto; padding:20px; background:#1a1a1a; border-radius:10px; text-align:left;}
+        h2 { text-align:center; margin-bottom:20px;}
+        p { margin-bottom:15px; line-height:1.6;}
+        ul { margin:10px 0; padding-left:20px;}
+        section { margin-bottom:30px;}
+        
+        /* ACCORDION STYLES */
+        .accordion {
+            background: #2a2a2a;
+            color: #00bfff;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .active, .accordion:hover {
+            background: #00bfff;
+            color: white;
+        }
+        .panel {
+            padding: 0 18px;
+            background: #2a2a2a;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion:after {
+            content: '\002B';
+            float: right;
+        }
+        .active:after {
+            content: "\2212";
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkpoint Gaming</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Us</h2>
+
+        <!-- INTERACTIVE ACCORDION SECTIONS -->
+        <button class="accordion">Our Story</button>
+        <div class="panel">
+            <p><b>Checkpoint Gaming</b> was founded in 2015 to bring gamers the latest consoles, games, and accessories at the best possible prices.</p>
+            <p>Our mission is simple: <i>to create an affordable and exciting gaming experience for everyone</i>.</p>
+            <p>Our vision is to be the <b>go-to destination for gamers</b>.</p>
+        </div>
+
+        <button class="accordion">Why Choose Checkpoint Gaming?</button>
+        <div class="panel">
+            <ul>
+                <li>🎮 Wide selection of consoles, games, and accessories</li>
+                <li>💻 Expert staff who are passionate about gaming</li>
+                <li>⚡ Affordable prices and special deals</li>
+                <li>🚚 Fast and reliable delivery nationwide</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Our Values</button>
+        <div class="panel">
+            <ul>
+                <li><b>Passion:</b> Gaming is at the heart of everything we do.</li>
+                <li><b>Innovation:</b> Bringing the newest gaming technology to our customers.</li>
+                <li><b>Community:</b> Supporting local gamers and esports events.</li>
+            </ul>
+        </div>
+
+        <!-- SITEMAP SECTION -->
+        <section>
+            <h3>Website Sitemap</h3>
+            <p>Our website is easy to navigate:</p>
+            <ul>
+                <li>🏠 Home – Latest news, deals, and featured products</li>
+                <li>ℹ️ About – Learn more about Checkpoint Gaming</li>
+                <li>🛍️ Products – Browse consoles, games, and accessories</li>
+                <li>📝 Enquiry – Service and product enquiries</li>
+                <li>🛒 Cart – Review your selected items</li>
+                <li>📞 Contact – Get in touch with us</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Checkpoint Gaming</p>
+        <p id="date"></p>
+    </footer>
+
+    <script>
+        // ACCORDION FUNCTIONALITY
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+</body>
+</html>

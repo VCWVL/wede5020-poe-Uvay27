@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO TITLE AND META TAGS -->
+    <title>Contact Checkpoint Gaming | Store Locations & Customer Support | South Africa</title>
+    <meta name="description" content="Contact Checkpoint Gaming for customer support, store locations in Johannesburg & Cape Town, or general enquiries. Gaming experts ready to help.">
+    <meta name="keywords" content="contact checkpoint gaming, gaming store locations, customer support, Johannesburg, Cape Town, South Africa gaming stores">
+    <meta name="author" content="Checkpoint Gaming">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: left;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+        }
+        main h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        main p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* STORE INFORMATION STYLING */
+        .store-info {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff0000;
+        }
+        .store-info h3 {
+            color: #ff6600;
+            margin-top: 0;
+        }
+        
+        /* GOOGLE MAP STYLING */
+        .map-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+        }
+        
+        /* FORM CONTROLS STYLING */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #00bfff;
+        }
+        .required::after {
+            content: " *";
+            color: #ff0000;
+        }
+        input, textarea, select {
+            padding: 12px;
+            border-radius: 5px;
+            border: 2px solid #333;
+            width: 100%;
+            font-size: 1rem;
+            box-sizing: border-box;
+            background: #2a2a2a;
+            color: white;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #00bfff;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* VALIDATION STYLING */
+        .error-message {
+            color: #ff4444;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: none;
+        }
+        .form-control.valid {
+            border-color: #4CAF50;
+        }
+        .form-control.invalid {
+            border-color: #ff4444;
+        }
+        
+        /* RESPONSE MESSAGES */
+        #responseMessage {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .success { 
+            background: #1a2a1a; 
+            border-left: 5px solid #4CAF50;
+        }
+        .error { 
+            background: #2a1a1a; 
+            border-left: 5px solid #ff4444;
+        }
+        
+        /* LOADING STATE */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .loading-spinner {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        /* SUBMIT BUTTON */
+        button[type="submit"] {
+            background-color: #00bfff;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover:not(:disabled) {
+            background-color: #ff6600;
+        }
+        button[type="submit"]:disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkpoint Gaming</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Checkpoint Gaming</h2>
+        <p>Find us at our stores or send us a message below. We're here to help with all your gaming needs!</p>
+
+        <!-- STORE INFORMATION -->
+        <div class="store-info">
+            <h3>📍 Johannesburg Store</h3>
+            <p><strong>Address:</strong> 123 Game Street, Sandton, Johannesburg</p>
+            <p><strong>Phone:</strong> (011) 123-4567</p>
+            <p><strong>Hours:</strong> Mon-Sat 9:00-18:00, Sun 10:00-16:00</p>
+        </div>
+
+        <div class="store-info">
+            <h3>📍 Cape Town Store</h3>
+            <p><strong>Address:</strong> 456 Tech Avenue, Century City, Cape Town</p>
+            <p><strong>Phone:</strong> (021) 765-4321</p>
+            <p><strong>Hours:</strong> Mon-Sat 9:00-18:00, Sun 10:00-15:00</p>
+        </div>
+
+        <!-- GOOGLE MAP -->
+        <div class="map-container">
+            <h3>Find Our Stores</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.260715589864!2d28.04731437501804!3d-26.107877359212255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9573d36b35b5c9%3A0x13f86710d10f478f!2sSandton%20City!5e0!3m2!1sen!2sza!4v1704297600000!5m2!1sen!2sza" 
+                    allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- CONTACT FORM WITH CONTROLS -->
+        <form id="contactForm" novalidate>
+            <!-- NAME FIELD -->
+            <div class="form-group">
+                <label for="contactName" class="required">Your Name</label>
+                <input type="text" id="contactName" name="name" class="form-control" 
+                       placeholder="Enter your full name" required minlength="2" maxlength="50">
+                <div class="error-message" id="nameError">Please enter your name (2-50 characters)</div>
+            </div>
+
+            <!-- EMAIL FIELD -->
+            <div class="form-group">
+                <label for="contactEmail" class="required">Your Email</label>
+                <input type="email" id="contactEmail" name="email" class="form-control" 
+                       placeholder="Enter your email address" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <!-- PHONE FIELD -->
+            <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" name="phone" class="form-control" 
+                       placeholder="10-digit number (optional)" pattern="[0-9]{10}">
+                <div class="error-message" id="phoneError">Please enter a valid 10-digit phone number</div>
+            </div>
+
+            <!-- SUBJECT DROPDOWN -->
+            <div class="form-group">
+                <label for="subject" class="required">Subject</label>
+                <select id="subject" name="subject" class="form-control" required>
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="sales">Sales Question</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error-message" id="subjectError">Please select a subject</div>
+            </div>
+
+            <!-- MESSAGE TEXTAREA -->
+            <div class="form-group">
+                <label for="contactMessage" class="required">Your Message</label>
+                <textarea id="contactMessage" name="message" class="form-control" 
+                          rows="6" placeholder="How can we help you today?" required minlength="10" maxlength="1000"></textarea>
+                <div class="error-message" id="messageError">Please enter your message (10-1000 characters)</div>
+            </div>
+
+            <!-- LOADING SPINNER -->
+            <div class="loading-spinner" id="loadingSpinner">
+                <p>Sending your message...</p>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" id="submitBtn">Send Message</button>
+        </form>
+
+        <!-- RESPONSE MESSAGE AREA -->
+        <div id="responseMessage"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Checkpoint Gaming</p>
+        <p id="date"></p>
+    </footer>
+
+    <!-- CONTACT FORM VALIDATION AND EMAIL PROCESSING -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
